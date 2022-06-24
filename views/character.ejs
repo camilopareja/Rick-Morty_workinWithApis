@@ -1,0 +1,57 @@
+<%- include('./partials/head.ejs', {
+    css: "character",
+    title: "Rick and Morty"
+  }) %>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <div class="character_container"> 
+              <div class="randomCharacter">
+                <img class="imagenPersonaje" src="<%- character.image %> " alt="personaje" >
+                <div class="infoPersonaje">
+                  <div class="section">
+                    <h1>                  
+                        <%- character.name %>
+                    </h1>
+                    <p class="characterStatus">
+                      <%- character.status %>
+                    </p>
+                  </div>
+                  <div class="section">
+                    <h4>
+                      last known location:
+                    </h4>
+                    <p>
+                      <%- character.location.name %>
+                    </p>
+                  </div>
+                  <div class="section">
+                    <h4>
+                      Species:
+                    </h4>
+                    <% if(character.species) { %>
+                      <p><%- character.species %></p>
+                    <% } else{ %>
+                      <p><%- Unknown %></p>
+                     <% }  %>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        <!-- CARD EPISODIOS -->
+        <div class="card-episodios">
+            <div class="card-image"></div>
+            <div class="number-episodio"> Illustration </div>
+            <div class="name-episodio"> A heading that must span over two lines
+                <div class="author"> By <span class="name">Abi</span> 4 days ago</div>
+            </div>
+        </div>
+         
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

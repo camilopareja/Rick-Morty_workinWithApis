@@ -1,0 +1,65 @@
+<%- include('./partials/head.ejs', {
+  css: "index",
+  title: "Rick and Morty"
+}) %>
+
+<body>
+  <%- include('./partials/header.ejs') %>
+  <main>
+    <div class="contenedorPrimeraSeccion">   
+      <!-- Se agrego un background con css utilizando esta sección -->
+    </div>   
+    <div class="opcionesPagina">
+      <div class="botonPersonajes"> 
+        <button class="buttonMain">
+          <% let randomNumber = Math.floor(Math.random() * 20) %> 
+          <a href="/character/random/<%- randomNumber+1%> ">
+            Descubre tus personajes favoritos
+          </a>
+        </button>
+      </div>
+      <div class="characterRandom_container"> 
+        <% for( let index = 1; index <= 5; index++ ) { 
+          let random_Number = Math.floor(Math.random() * 20) %>
+          <div class="randomCharacter">
+            <img class="imagenPersonaje" src="<%- character[random_Number].image %> " alt="personaje" >
+            <div class="infoPersonaje">
+              <div class="section">
+                <h1>
+                  <a href="/character/<%- random_Number+1 %>" type="submit">                    
+                    <%- character[random_Number].name %>
+                  </a>                                 
+                </h1>
+                <p>
+                  <%- character[random_Number].status %>
+                </p>
+              </div>
+              <div class="section">
+                <h4>
+                  last known location:
+                </h4>
+                <p>
+                  <%- character[random_Number].location.name %>
+                </p>
+              </div>
+              <div class="section">
+                <h4>
+                  Species:
+                </h4>
+                <% if(character[random_Number].species) { %>
+                  <p><%- character[random_Number].species %></p>
+                <% } else{ %>
+                  <p><%- Unknown %></p>
+                 <% }  %>
+              </div>
+            </div>
+        </div>
+        <% } %>
+      </div>
+     
+      
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+/* HEADER */
+
+header{
+    width: 100vw;
+    height: 10vh;
+  }
+  .contenedorHeader{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    /* border-bottom: 1px solid rgb(190, 187, 187); */
+  }
+  .contenedorHeader img {
+    object-fit: contain;
+    height: 100%;
+  }

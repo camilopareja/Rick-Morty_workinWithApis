@@ -1,0 +1,59 @@
+/* Character cards */
+
+.character_container
+{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 60vw;
+  margin: 10vh auto;
+}
+
+
+.randomCharacter {
+  background-color: rgb(32, 35, 41);
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100vw;
+  border-radius: 1rem;
+  margin: 5px;
+}
+
+.imagenPersonaje{
+  object-fit: cover;
+  width: 40%;
+  border-radius: 1rem 0 0 1rem;
+}
+.infoPersonaje { 
+  width: 60%;
+  padding: 10px;
+}
+
+.infoPersonaje h1 {
+  text-decoration: none;
+  margin: 2vh 0 2vh;
+  color: orangered;
+  font-weight: bold;
+}
+
+
+.infoPersonaje h4 {
+  font-size: 1.5rem;
+  margin: 3vh 0 2vh;
+  color: grey;
+}
+
+.infoPersonaje .characterStatus {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.infoPersonaje p {
+  font-size: 1rem;
+  margin: 1vh;
+  color: white;
+}
+
+/* >>>>CARD EPISODIOS */
+
+
+  
