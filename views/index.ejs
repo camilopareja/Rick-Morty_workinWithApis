@@ -20,7 +20,8 @@
       </div>
       <div class="characterRandom_container"> 
         <% for( let index = 1; index <= 5; index++ ) { 
-          let random_Number = Math.floor(Math.random() * 20) %>
+          let random_Number = Math.floor(Math.random() * 20)
+           %>
           <div class="randomCharacter">
             <img class="imagenPersonaje" src="<%- character[random_Number].image %> " alt="personaje" >
             <div class="infoPersonaje">

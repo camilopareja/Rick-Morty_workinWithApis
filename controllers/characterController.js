@@ -11,9 +11,20 @@ const characterController = {
 
     randomCard: (req,res) => {
         character = `https://rickandmortyapi.com/api/character/${req.params.id}`
-        fetch(character)
-            .then(response => response.json())
-            .then(data => res.render("randomCharacter", {character: data}));
+
+        async function fetchData(urlApi) {
+            const data = await fetch(urlApi);
+            const characteInfo = await data.json()
+            return characteInfo
+        }
+
+        (async () => {
+            try {
+                fetchData(character)
+                    .then(data => res.render("randomCharacter", {character: data}))
+            } catch (error) {
+            }
+        })();
     }
 }
 
